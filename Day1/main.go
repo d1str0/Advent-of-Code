@@ -45,7 +45,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fuel += calc(mass)
+		fuel += total(mass)
 	}
 
 	fmt.Printf("Total amount of fuel needed: %d\n", fuel)
@@ -64,4 +64,16 @@ func calc(mass int) int {
 	s2 := int64(s1)
 	fuel := s2 - 2
 	return int(fuel)
+}
+
+// total takes the mass and continues calculating fuel costs including the fuel
+// needed to carry the fuel
+func total(mass int) int {
+	total := 0
+	fuel := calc(mass)
+	for fuel > 0 {
+		total += fuel
+		fuel = calc(fuel)
+	}
+	return total
 }

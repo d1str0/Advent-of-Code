@@ -28,4 +28,22 @@ func TestCalc(t *testing.T) {
 		t.Errorf("Calculated %d, got %d, expected %d", m4, calc(m4), f4)
 	}
 
+	t1 := 2
+	t2 := 2
+	t3 := 966
+	t4 := 50346
+
+	if total(m1) != t1 {
+		t.Errorf("Calculated %d, got %d, expected %d", m1, calc(m1), t1)
+	}
+	if total(m2) != t2 {
+		t.Errorf("Calculated %d, got %d, expected %d", m2, calc(m2), t2)
+	}
+	if total(m3) != t3 {
+		t.Errorf("Calculated %d, got %d, expected %d", m3, calc(m3), t3)
+	}
+	if total(m4) != t4 {
+		t.Errorf("Calculated %d, got %d, expected %d", m4, calc(m4), t4)
+	}
+
 }
