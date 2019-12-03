@@ -60,9 +60,8 @@ func main() {
 // This is calculated by taking the mass, dividing by 3, rounding down, and then
 // subtracting 2.
 func calc(mass int) int {
-	s1 := float64(mass) / float64(3)
-	s2 := int64(s1)
-	fuel := s2 - 2
+	s1 := mass / 3
+	fuel := s1 - 2
 	return int(fuel)
 }
 
